@@ -1,113 +1,128 @@
 import Image from "next/image";
-
+import Navbar from "./components/Navbar";
+import Mythumb from "/public/Mythumb.png";
+import { ImHtmlFive } from "react-icons/im";
+import { FaReact } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiCss3,SiJavascript,SiTailwindcss } from "react-icons/si";
+import ProjectOne from "/public/ProjectOne.jpg";
+import NumGuess from "/public/num-guess.jpg"
+import MyHome from "/public/home.jpg"
+import Footer from "./components/Footer";
 export default function Home() {
+  const projects = [
+    {
+      id: 1,
+      title: "Text Editor",
+      description: "Text Editor built with React! Having features of Bold & Italic for Styling your text, Text Alignment Options, Text Transformation to Upercase or lowercase, and many more.",
+      image: ProjectOne,
+      link: "https://fizasohail1.github.io/Text-Editor/",
+    },
+    {
+      id: 2,
+      title: "Traveling Website",
+      description: "Built with HTML, Tailwind CSS, and JavaScript, this fully responsive website ensures a seamless experience across all devices, showcasing the beauty of beaches at your fingertips.",
+      image: Mythumb,
+      link: "https://fizasohail1.github.io/Travel-website/",
+    },
+    {
+      id: 3,
+      title: " Number Guessing Game",
+      description: "Check out this cool Number Guessing Game I created using HTML, Tailwind CSS, and JavaScript!",
+      image: NumGuess,
+      link: "https://fizasohail1.github.io/Num-guessing-game/",
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+    <div className="">
+       <Navbar/>
+         <div id="Home" className="mx-12 ">
+            <div className="flex-col flex md:flex-row md:justify-between items-center text-left  font-serif text-lg text-white pt-32 md:py-28">
+                 <div className=" text-md md:text-2xl text-white font-serif mx-auto">
+                       <h3 className=" text-2xl md:text-3xl">Hi </h3> 
+                       <h1 className="text-3xl md:text-4xl">I'm <span className="text-orange-700 font-extrabold">Fiza Sohail<br/></span> a Web Developer</h1>
+                        <p className="text-white md:w-3/5 lg:w-4/5 text-sm sm:text-base md:text-lg mt-4 mr-10 leading-normal ">
+                        Welcome to my personal portfolio.I'm a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I'm honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
+                        </p>
+                        </div>
+                <div className="border-orange-700 w-[350px] md:w-[1500px] lg:w-[950px]  bg-black border-x-4 border-y-4 flex justify-center items-center rounded-full h-[350px] md:h-[300px] lg:h-[350px]  overflow-hidden my-14">
+                    <Image src={MyHome}
+                     alt="abc"
+                     objectFit="cover"
+                     objectPosition="center" className=""/>
+                </div>  
+            </div>
+          
+         </div>
         </div>
+        <section className="mt-10 md:my-20">
+      <h2 className="text-center text-3xl font-bold mb-8 text-white ">
+        Recent Projects
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-10 my-16">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-gray-300 rounded-lg shadow-lg overflow-hidden border-x-4 border-y-4 border border-white border-solid transition-opacity hover:duration-300"
+          >
+            <div className="relative w-full h-48">
+              <Image
+                src={project.image}
+                alt={project.title}
+                layout="fill" 
+                objectFit="cover" 
+                className="rounded-t-lg"
+              />
+            </div>
+            <div className="p-2">
+              <h3 className="text-xl text-black font-bold mb-2">{project.title}</h3>
+              <p className="text-black">{project.description}</p>
+              <a href={project.link} className="block mt-4 font-bold hover:text-black hover:duration-150 text-orange-700">
+                View Project</a>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </section>
+    <a href="https://github.com/FizaSohail1?tab=repositories" className='bg-orange-600 hover:bg-white text-black text-sm  my-10 mx-auto justify-center flex md:text-lg text-center items-center rounded-full p-2 font-bold w-44 h-full animate-bounce '>View More</a>
+   
+    <section id="skills" className="md:ml-32 py-20">
+          <div className="container ">
+            <h2 className="text-2xl md:text-4xl text-center mb-8">My Skills</h2>
+            <div className="flex md:justify-center">
+              <ul className="mx-auto">
+                <li className=" text-white shadow-md "><ImHtmlFive className="text-3xl text-orange-600"/></li>
+                <div className=" bg-gray-300 w-[300px]  md:w-[600px]  text-right rounded-full my-7">        
+                 <div className="bg-orange-700  w-[95%] text-right text-sm font-bold ">90%</div>
+                </div>                 
+                <li className=" text-white shadow-md"><SiCss3 className="text-3xl text-blue-500"/></li>
+                <div className=" bg-gray-300  w-[300px]  md:w-[600px] text-right rounded-full my-7">        
+                 <div className="bg-orange-700  w-[70%] text-right text-xs font-bold">70%</div>
+                </div> 
+                <li className=" text-white shadow-md">< SiJavascript className="text-3xl text-yellow-200"/></li>
+                <div className=" bg-gray-300 w-[300px]  md:w-[600px] text-right rounded-full my-5">        
+                 <div className="bg-orange-700  w-[80%] text-right text-xs font-bold">80%</div>
+                </div> 
+                <li className=" text-white shadow-md"><FaReact className="text-3xl text-blue-500"/></li>
+                <div className=" bg-gray-300  w-[300px]  md:w-[600px] text-right rounded-full my-5">        
+                 <div className="bg-orange-700  w-[45%] text-right text-xs font-bold">40%</div>
+                </div> 
+                <li className=" text-white shadow-md"><RiNextjsFill className="text-3xl"/></li>
+                <div className=" bg-gray-300  w-[300px]  md:w-[600px] text-right rounded-full my-5">        
+                 <div className="bg-orange-700  w-[35%] text-right text-xs font-bold">30%</div>
+                </div> 
+                <li className=" text-white shadow-md"><SiTailwindcss className="text-3xl text-blue-400"/></li>
+                <div className=" bg-gray-300  w-[300px]  md:w-[600px] text-right rounded-full my-5">        
+                 <div className="bg-orange-700  w-[75%] text-right text-xs font-bold">75%</div>
+                </div> 
+              </ul>
+            </div>
+          </div>
+        </section>
+      
+    <Footer/>
+      </>
   );
 }
