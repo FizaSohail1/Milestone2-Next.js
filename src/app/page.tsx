@@ -43,7 +43,7 @@ export default function Home() {
                        <h3 className=" text-2xl md:text-3xl">Hi </h3> 
                        <h1 className="text-3xl md:text-4xl">I'm <span className="text-orange-700 font-extrabold">Fiza Sohail<br/></span> a Web Developer</h1>
                         <p className="text-white md:w-3/5 lg:w-4/5 text-sm sm:text-base md:text-lg mt-4 mr-10 leading-normal ">
-                        Welcome to my personal portfolio.I'm a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I'm honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
+                        Welcome to my personal portfolio.I am a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I am  honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
                         </p>
             <a href="/contact" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 justify-center flex md:text-lg text-center  rounded-full p-2 font-bold w-44 h-full animate-bounce">Contact Me</a>
             </div>
