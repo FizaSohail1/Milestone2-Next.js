@@ -45,7 +45,7 @@ export default function Home() {
                         <p className="text-white md:w-3/5 lg:w-4/5 text-sm sm:text-base md:text-lg mt-4 mr-10 leading-normal ">
                         Welcome to my personal portfolio.I'm a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I'm honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
                         </p>
-            <a href="https://github.com/FizaSohail1?tab=repositories" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 justify-center flex md:text-lg text-center  rounded-full p-2 font-bold w-44 h-full animate-bounce">Contact Me</a>
+            <a href="/contact" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 justify-center flex md:text-lg text-center  rounded-full p-2 font-bold w-44 h-full animate-bounce">Contact Me</a>
             </div>
                 <div className="border-orange-700 w-[350px] md:w-[1500px] lg:w-[1000px]  bg-black border-x-4 border-y-4 flex justify-center items-center rounded-full h-[350px] md:h-[300px] lg:h-[300px]  overflow-hidden my-12">
                     <Image src={MyHome}
