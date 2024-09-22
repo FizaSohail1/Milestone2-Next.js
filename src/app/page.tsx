@@ -45,18 +45,21 @@ export default function Home() {
                         <p className="text-white md:w-3/5 lg:w-4/5 text-sm sm:text-base md:text-lg mt-4 mr-10 leading-normal ">
                         Welcome to my personal portfolio.I'm a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I'm honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
                         </p>
-                        </div>
-                <div className="border-orange-700 w-[350px] md:w-[1500px] lg:w-[950px]  bg-black border-x-4 border-y-4 flex justify-center items-center rounded-full h-[350px] md:h-[300px] lg:h-[350px]  overflow-hidden my-14">
+            <a href="https://github.com/FizaSohail1?tab=repositories" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 justify-center flex md:text-lg text-center  rounded-full p-2 font-bold w-44 h-full animate-bounce">Contact Me</a>
+            </div>
+                <div className="border-orange-700 w-[350px] md:w-[1500px] lg:w-[1000px]  bg-black border-x-4 border-y-4 flex justify-center items-center rounded-full h-[350px] md:h-[300px] lg:h-[300px]  overflow-hidden my-12">
                     <Image src={MyHome}
                      alt="abc"
                      objectFit="cover"
                      objectPosition="center" className=""/>
                 </div>  
             </div>
+
           
          </div>
         </div>
-        <section className="mt-10 md:my-20">
+    <div className="secoundsec bg-neutral-800">
+    <section className="mt-10 md:my-20 ">
       <h2 className="text-center text-3xl font-bold mb-8 text-white ">
         Recent Projects
       </h2>
@@ -65,9 +68,8 @@ export default function Home() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-gray-300 rounded-lg shadow-lg overflow-hidden border-x-4 border-y-4 border border-white border-solid transition-opacity hover:duration-300"
-          >
-            <div className="relative w-full h-48">
+            className="bg-gray-300 rounded-lg shadow-lg overflow-hidden border-x-4 border-y-4 border border-white border-solid transition-opacity hover:duration-300">
+            <div className="relative w-full h-44">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -86,8 +88,9 @@ export default function Home() {
         ))}
       </div>
     </section>
-    <a href="https://github.com/FizaSohail1?tab=repositories" className='bg-orange-600 hover:bg-white text-black text-sm  my-10 mx-auto justify-center flex md:text-lg text-center items-center rounded-full p-2 font-bold w-44 h-full animate-bounce '>View More</a>
+    <a href="https://github.com/FizaSohail1?tab=repositories" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 mx-auto justify-center flex md:text-lg text-center items-center rounded-full p-2 font-bold w-44 h-full animate-bounce">View More</a>
    
+    </div>
     <section id="skills" className="md:ml-32 py-20">
           <div className="container ">
             <h2 className="text-2xl md:text-4xl text-center mb-8">My Skills</h2>
@@ -95,11 +98,11 @@ export default function Home() {
               <ul className="mx-auto">
                 <li className=" text-white shadow-md "><ImHtmlFive className="text-3xl text-orange-600"/></li>
                 <div className=" bg-gray-300 w-[300px]  md:w-[600px]  text-right rounded-full my-7">        
-                 <div className="bg-orange-700  w-[95%] text-right text-sm font-bold ">90%</div>
+                 <div className="bg-orange-700  w-[95%] text-right text-sm font-bold ">95%</div>
                 </div>                 
                 <li className=" text-white shadow-md"><SiCss3 className="text-3xl text-blue-500"/></li>
                 <div className=" bg-gray-300  w-[300px]  md:w-[600px] text-right rounded-full my-7">        
-                 <div className="bg-orange-700  w-[70%] text-right text-xs font-bold">70%</div>
+                 <div className="bg-orange-700  w-[90%] text-right text-xs font-bold">90%</div>
                 </div> 
                 <li className=" text-white shadow-md">< SiJavascript className="text-3xl text-yellow-200"/></li>
                 <div className=" bg-gray-300 w-[300px]  md:w-[600px] text-right rounded-full my-5">        

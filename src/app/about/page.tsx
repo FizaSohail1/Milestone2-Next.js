@@ -16,7 +16,7 @@ function page() {
             </div>
             </div>
         </div>
-        <a href='/contact' className='bg-orange-600 hover:bg-white text-black text-sm  my-10 mx-auto justify-center flex md:text-lg text-center items-center rounded-full p-2 font-bold w-44 h-full animate-bounce '>Contact Me</a>
+        <a href="/contact" className="bg-orange-600 hover:bg-white text-black text-sm  my-10 mx-auto justify-center flex md:text-lg text-center items-center rounded-full p-2 font-bold w-44 h-full animate-bounce">Contact Me</a>
 
         </section>
         <Footer/>
