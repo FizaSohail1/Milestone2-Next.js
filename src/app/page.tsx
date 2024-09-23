@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Mythumb from "/public/Mythumb.png";
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from "react-icons/im"
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiCss3,SiJavascript,SiTailwindcss } from "react-icons/si";
