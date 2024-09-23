@@ -41,7 +41,7 @@ export default function Home() {
             <div className="flex-col flex md:flex-row md:justify-between items-center text-left  font-serif text-lg text-white pt-32 md:py-28">
                  <div className=" text-md md:text-2xl text-white font-serif mx-auto">
                        <h3 className=" text-2xl md:text-3xl">Hi </h3> 
-                       <h1 className="text-3xl md:text-4xl">I'm <span className="text-orange-700 font-extrabold">Fiza Sohail<br/></span> a Web Developer</h1>
+                       <h1 className="text-3xl md:text-4xl">I am <span className="text-orange-700 font-extrabold">Fiza Sohail<br/></span> a Web Developer</h1>
                         <p className="text-white md:w-3/5 lg:w-4/5 text-sm sm:text-base md:text-lg mt-4 mr-10 leading-normal ">
                         Welcome to my personal portfolio.I am a web developer with a strong background in computer science and a passion for frontend development. I specialize in building responsive and visually appealing websites using HTML, CSS, JavaScript, and TypeScript, with a focus on Tailwind CSS. Currently, I am  honing my skills in React.js and Next.js, eager to transform creative ideas into dynamic web experiences.
                         </p>
